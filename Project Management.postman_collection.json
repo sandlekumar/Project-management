@@ -1,0 +1,348 @@
+{
+  "info": {
+    "_postman_id": "e983f072-06f5-4216-b7d9-6c8b17d47d1a",
+    "name": "Project Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51765822",
+    "_collection_link": "https://go.postman.co/collection/51765822-e983f072-06f5-4216-b7d9-6c8b17d47d1a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Sandle\",\r\n  \"email\": \"sandle@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"user\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \r\n  \"email\": \"sandle@gmail.com\",\r\n  \"password\": \"123456\"\r\n  \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Project",
+      "item": [
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzkxNDQ2ODQxOWIwZmE1YzgxMWU0NiIsImlhdCI6MTc3NDc4NTY3NSwiZXhwIjoxNzc0Nzg5Mjc1fQ.elutjgH-X6gj4veVRSisqpJIA0ffkF1cGTZScaq7z-4",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Website Project\",\r\n  \"description\": \"Frontend + Backend\",\r\n  \"startDate\": \"2026-03-29\",\r\n  \"endDate\": \"2026-04-10\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/projects",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzkxNDQ2ODQxOWIwZmE1YzgxMWU0NiIsImlhdCI6MTc3NDc4NTY3NSwiZXhwIjoxNzc0Nzg5Mjc1fQ.elutjgH-X6gj4veVRSisqpJIA0ffkF1cGTZScaq7z-4",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Design UI\",\r\n  \"description\": \"Create dashboard UI\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2026-04-01\",\r\n  \"project\": \"69c8cb3fbe3a9948b2148d02\",\r\n  \"user\": \"69c914468419b0fa5c811e46\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzkxNDQ2ODQxOWIwZmE1YzgxMWU0NiIsImlhdCI6MTc3NDc4NTY3NSwiZXhwIjoxNzc0Nzg5Mjc1fQ.elutjgH-X6gj4veVRSisqpJIA0ffkF1cGTZScaq7z-4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"priority\":\"High\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/tasks/69c916058419b0fa5c811e54",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks",
+                "69c916058419b0fa5c811e54"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzkxNDQ2ODQxOWIwZmE1YzgxMWU0NiIsImlhdCI6MTc3NDc4NTY3NSwiZXhwIjoxNzc0Nzg5Mjc1fQ.elutjgH-X6gj4veVRSisqpJIA0ffkF1cGTZScaq7z-4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"priority\":\"Low\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/tasks/69c916058419b0fa5c811e54",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks",
+                "69c916058419b0fa5c811e54"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:5000/api/tasks/69c916058419b0fa5c811e54",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzkxNDQ2ODQxOWIwZmE1YzgxMWU0NiIsImlhdCI6MTc3NDc4NTY3NSwiZXhwIjoxNzc0Nzg5Mjc1fQ.elutjgH-X6gj4veVRSisqpJIA0ffkF1cGTZScaq7z-4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"To Do\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/tasks/69c916058419b0fa5c811e54",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks",
+                "69c916058419b0fa5c811e54"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "register api",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzkwZjJiODQxOWIwZmE1YzgxMWUyZSIsImlhdCI6MTc3NDc4NDQzMywiZXhwIjoxNzc0Nzg4MDMzfQ.foucBTJ42gXjm7h-CXp8w4Dh1AV1MCB5PLlzLXjzEds",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \r\n  \"priority\": \"Low\"\r\n  \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/69c911d08419b0fa5c811e40",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "69c911d08419b0fa5c811e40"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
